@@ -1,11 +1,21 @@
 name: Publish Portfolio Update
-on: [push]
+on:
+  push:
+    paths:
+      - 'feed.yaml'
+      - 'feed.py'
+      - '.github/workflows/main.yml'
+
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v3
-    - name: Run Feed Generator
-      uses: VICTORJOSEARAVENALANDE/portfolio-generator@main
-    
+      - uses: actions/checkout@v3
+
+      - name: Generate & Publish Feed
+        uses: VICTORJOSEARAVENALANDE/portfolio-generator@main
+        with:
+          name: ${{ github.actor }}
+          email: ${{ github.actor }}@users.noreply.github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
