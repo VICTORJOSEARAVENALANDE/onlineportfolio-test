@@ -1,5 +1,4 @@
-This is the action I made: name: 
-Publish Portfolio Update
+name: Publish Portfolio Update
 on: [push]
 jobs:
   build: 
