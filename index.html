@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<title>Victor-Jose’s Portfolio</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    li { margin-bottom: 1.5rem; }
+    small { color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Portfolio Updates</h1>
+  <ul id="updates"></ul>
+
+  <script>
+  fetch('portfolio.xml')
+    .then(r => r.text())
+    .then(str => new DOMParser().parseFromString(str, 'application/xml'))
+    .then(xml => {
+      xml.querySelectorAll('item').forEach(item => {
+        const t = item.querySelector('title').textContent;
+        const l = item.querySelector('link').textContent;
+        const d = item.querySelector('description').textContent;
+        const dt = item.querySelector('pubDate').textContent;
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${l}">${t}</a><br>
+                        <small>${dt}</small>
+                        <p>${d}</p>`;
+        document.getElementById('updates').appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>
