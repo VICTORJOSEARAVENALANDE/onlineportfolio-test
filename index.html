@@ -1,35 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-<title>Victor-Jose’s Portfolio</title>
-  <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    li { margin-bottom: 1.5rem; }
-    small { color: #666; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: left;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            max-width: 1100px;
+        }
+        .intro-text {
+            flex: 1;
+        }
+        .intro-text h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .intro-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .contact-btn {
+            background-color: #00c853;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+        .profile-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .profile-image img {
+            border-radius: 50%;
+            max-width: 80%;
+        }
+    </style>
 </head>
 <body>
-  <h1>Portfolio Updates</h1>
-  <ul id="updates"></ul>
-
-  <script>
-  fetch('portfolio.xml')
-    .then(r => r.text())
-    .then(str => new DOMParser().parseFromString(str, 'application/xml'))
-    .then(xml => {
-      xml.querySelectorAll('item').forEach(item => {
-        const t = item.querySelector('title').textContent;
-        const l = item.querySelector('link').textContent;
-        const d = item.querySelector('description').textContent;
-        const dt = item.querySelector('pubDate').textContent;
-        const li = document.createElement('li');
-        li.innerHTML = `<a href="${l}">${t}</a><br>
-                        <small>${dt}</small>
-                        <p>${d}</p>`;
-        document.getElementById('updates').appendChild(li);
-      });
-    });
-  </script>
+    <div class="container">
+        <div class="intro-text">
+            <h1>Victor-José.</h1>
+            <p>
+                Cognitive Neuroscientist & Self-Proclaimed Programmer.<br>
+                My mission is to analyze data and develop solutions that bridge neuroscience and technology.
+            </p>
+            <a class="contact-btn" href="#portfolio">See My Portfolio</a>
+        </div>
+        <div class="profile-image">
+            <img src="your-profile-photo.jpg" alt="Victor">
+        </div>
+    </div>
 </body>
 </html>
