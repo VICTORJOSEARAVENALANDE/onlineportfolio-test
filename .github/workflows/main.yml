@@ -1,44 +1,12 @@
-name: Publish Portfolio Feed
-
-on:
-  push:
-    paths:
-      - 'feed.py'
-      - 'feed.yaml'
-      - '.github/workflows/main.yml'
-
-permissions:
-  contents: write   # allow committing back
-
+This is the action I made: name: 
+Publish Portfolio Update
+on: [push]
 jobs:
-  generate:
+  build: 
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout
+    - name: Checkout Repo
       uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.11"
-
-    - name: Install PyYAML
-      run: pip install pyyaml
-
-    - name: Generate RSS feed
-      run: python feed.py
-
-    - name: Commit & Push if changed
-      run: |
-        git diff --quiet || (
-          git config user.name "github-actions" &&
-          git config user.email "github-actions@github.com" &&
-          git add portfolio.xml &&
-          git commit -m "chore: update portfolio feed" &&
-          git push
-        )
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Run Feed Generator
+      uses: VICTORJOSEARAVENALANDE/portfolio-generator@main
+    
