@@ -1,13 +1,13 @@
 # feed.yaml
-link: https://victorjosearavenalande.github.io/onlineportfolio-test
-title: Victor’s Portfolio Updates
+link: https://VICTORJOSEARAVENALANDE.github.io/onlineportfolio-test
+title: Victor-José’s Online Portfolio 
 description: All new certificates, jobs, projects and milestones.
 language: en-US
 image: /images/avatar.png
 
 entries:
-  - title: Google Data Analytics Certificate
-    date: Tue, 10 Jul 2025 00:00:00 GMT
+  - title: GitHub LinkedIn Certificate
+    date: Mon, 14 Jul 2025 00:00:00 GMT
     link: /certificates/google-data-analytics
     description: Completed Google’s Professional Data Analytics program.
   - title: Research Assistant @ Acme Corp
