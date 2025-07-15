@@ -19,7 +19,8 @@ ET.SubElement(ch, 'image').text       = data['link'] + data['image']
 for e in data['entries']:
     item = ET.SubElement(ch, 'item')
     ET.SubElement(item, 'title').text       = e['title']
-    ET.SubElement(item, 'link').text        = data['link'] + e['link']
+    entry_link = e.get('link') or ''
+    ET.SubElement(item, 'link').text        = data['link'].rstrip('/') + entry_link
     ET.SubElement(item, 'short').text       = e['short']
     ET.SubElement(item, 'long').text        = e['long']
     ET.SubElement(item, 'date').text        = e['date']
