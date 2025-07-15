@@ -33,42 +33,17 @@
 
   <section id="career">
     <h2>Career</h2>
-    <div class="item">
-      <h3>Research Assistant — Acme Corp</h3>
-      <p>June 2025 – Present<br>
-      Designed and executed fMRI analysis pipelines; collaborated on normative modelling of cortical thickness data; published two internal reports.</p>
-    </div>
-    <div class="item">
-      <h3>Data Analyst Intern — NeuroTech</h3>
-      <p>Jan 2025 – May 2025<br>
-      Automated preprocessing for EEG datasets, built MATLAB scripts for feature extraction, and presented findings at lab meetings.</p>
-    </div>
+    <div id="feed-career-long"></div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <div class="item">
-      <h3>MSc Cognitive Neuroscience — University X</h3>
-      <p>2022–2024<br>
-      Graduated with distinction; thesis on normative modelling for 15q11.2 CNV cohort comparing cortical volumes.</p>
-    </div>
-    <div class="item">
-      <h3>BSc Psychology — University Y</h3>
-      <p>2019–2022<br>
-      Focus on research methods and statistics; honours project on EEG markers of attention.</p>
-    </div>
+    <div id="feed-education-long"></div>
   </section>
   
   <section id="engagement">
     <h2>Engagement</h2>
-    <div class="item">
-      <h3>Speaker — BrainData Conf 2025</h3>
-      <p>Presented on challenges in longitudinal normative modelling and shared code repository.</p>
-    </div>
-    <div class="item">
-      <h3>Volunteer — Neurodiversity Meetup</h3>
-      <p>Organized monthly workshops discussing research accessibility and community outreach.</p>
-    </div>
+    <div id="feed-engagement-long"></div>
   </section>
   
   <script>
@@ -92,5 +67,35 @@
     window.addEventListener('scroll', activateLink);
     // Hover effect is handled via CSS :hover
   </script>
+
+  <script>
+fetch('portfolio.xml')
+  .then(res => res.text())
+  .then(str => new DOMParser().parseFromString(str,'text/xml'))
+  .then(xml => {
+    xml.querySelectorAll('item').forEach(item => {
+      const cat   = item.querySelector('category').textContent;
+      const title = item.querySelector('title').textContent;
+      const date  = item.querySelector('date').textContent;
+      const short = item.querySelector('short').textContent;
+      const long  = item.querySelector('long').textContent;
+      const link  = item.querySelector('link').textContent;
+
+      container = document.getElementById(`feed-${cat}-long`);
+      if (container) {
+        const div = document.createElement('div');
+        div.className = 'item';
+        div.innerHTML = `
+          <h3><a href="${link}" target="_blank">${title}</a></h3>
+          <small>${date}</small>
+          <p>${long}</p>
+        `;
+        container.appendChild(div);
+      }
+    });
+  })
+  .catch(console.error);
+</script>
+
 </body>
 </html>

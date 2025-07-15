@@ -63,34 +63,22 @@
 
   <section id="career">
     <h2 class="section-title">Career</h2>
-    <div class="content">
-      <!-- Add career items here -->
-      <p>• Research Assistant at Acme Corp (Jun 2025 – Present)</p>
-      <p>• Data Analyst Intern at NeuroTech (Jan 2025 – May 2025)</p>
-    </div>
+    <div id="feed-career-short"></div>
     <a href="portfolio.html#career" class="btn-more">Read more</a>
   </section>
 
   <section id="education">
     <h2 class="section-title">Education</h2>
-    <div class="content">
-      <!-- Add education items here -->
-      <p>• MSc Cognitive Neuroscience, University X (2024)</p>
-      <p>• BSc Psychology, University Y (2022)</p>
-    </div>
+    <div id="feed-education-short"></div>
     <a href="portfolio.html#education" class="btn-more">Read more</a>
   </section>
 
   <section id="engagement">
     <h2 class="section-title">Engagement</h2>
-    <div class="content">
-      <!-- Add engagement items here -->
-      <p>• Speaker at BrainData Conf 2025</p>
-      <p>• Volunteer at Neurodiversity Meetup</p>
-    </div>
+    <div id="feed-engagement-short"></div>
     <a href="portfolio.html#engagement" class="btn-more">Read more</a>
   </section>
-  
+
   <script>
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('header a[href*="#"]');
@@ -109,6 +97,32 @@
   }
   window.addEventListener('scroll', activateLink);
 </script>
+<script>
+fetch('portfolio.xml')
+  .then(res => res.text())
+  .then(str => new DOMParser().parseFromString(str,'text/xml'))
+  .then(xml => {
+    xml.querySelectorAll('item').forEach(item => {
+      const cat   = item.querySelector('category').textContent;
+      const title = item.querySelector('title').textContent;
+      const date  = item.querySelector('date').textContent;
+      const short = item.querySelector('short').textContent;
+      const long  = item.querySelector('long').textContent;
+      const link  = item.querySelector('link').textContent;
+
+      // Choose container and markup by page:
+      // On index.html → short summaries
+      let container = document.getElementById(`feed-${cat}-short`);
+      if (container) {
+        const p = document.createElement('p');
+        p.textContent = `• ${title} (${date}) — ${short}`;
+        container.appendChild(p);
+      }
+    });
+  })
+  .catch(console.error);
+</script>
+
 
 
 </body>

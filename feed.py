@@ -20,8 +20,11 @@ for e in data['entries']:
     item = ET.SubElement(ch, 'item')
     ET.SubElement(item, 'title').text       = e['title']
     ET.SubElement(item, 'link').text        = data['link'] + e['link']
-    ET.SubElement(item, 'description').text = e['description']
-    ET.SubElement(item, 'pubDate').text     = e['date']
+    ET.SubElement(item, 'short').text       = e['short']
+    ET.SubElement(item, 'long').text        = e['long']
+    ET.SubElement(item, 'date').text        = e['date']
+    ET.SubElement(item, 'category').text    = e.get('category', '')
+
 
 ET.ElementTree(rss).write('portfolio.xml',
                           encoding='utf-8',
