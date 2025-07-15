@@ -16,6 +16,7 @@
     header .logo { font-weight: 900; font-size: 20px; }
     header nav a { margin-left: 30px; text-decoration: none; color: #fff; font-weight: 200; }
     header nav a.active { color: #e63946; }
+    header a:hover { color:#e63946; }
     section { padding: 100px 50px; }
     .intro { display: flex; align-items: center; justify-content: space-between; height: 100vh; padding-top: 80px; }
     .intro-left { max-width: 60%; }
@@ -89,6 +90,26 @@
     </div>
     <a href="portfolio.html#engagement" class="btn-more">Read more</a>
   </section>
+  
+  <script>
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('header a[href*="#"]');
+  function activateLink() {
+    let scrollPos = window.scrollY + 100;
+    sections.forEach(section => {
+      if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').includes(section.id)) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+  window.addEventListener('scroll', activateLink);
+</script>
+
 
 </body>
 

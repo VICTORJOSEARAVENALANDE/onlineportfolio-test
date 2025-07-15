@@ -10,6 +10,7 @@
     body { font-family:'Poppins',sans-serif; background:#000; color:#fff; padding-top:80px; }
     header { position:fixed; top:0; width:100%; display:flex; justify-content:center; background:rgba(0,0,0,0.7); padding:10px 0; z-index:100; }
     header a { margin:0 20px; color:#fff; text-decoration:none; font-weight:600; }
+    header a:hover { color:#e63946; }
     header a.active { color:#e63946; }
     section { padding:80px 50px; max-width:900px; margin:0 auto; }
     h1,h2 { font-weight:900; }
@@ -57,7 +58,7 @@
       Focus on research methods and statistics; honours project on EEG markers of attention.</p>
     </div>
   </section>
-
+  
   <section id="engagement">
     <h2>Engagement</h2>
     <div class="item">
@@ -69,5 +70,27 @@
       <p>Organized monthly workshops discussing research accessibility and community outreach.</p>
     </div>
   </section>
+  
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('header a[href*="#"]');
+
+    function activateLink() {
+      let scrollPos = window.scrollY + 100;
+      sections.forEach(section => {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(section.id)) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', activateLink);
+    // Hover effect is handled via CSS :hover
+  </script>
 </body>
 </html>
