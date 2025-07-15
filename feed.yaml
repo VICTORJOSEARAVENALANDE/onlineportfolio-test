@@ -6,26 +6,48 @@ language: en-US
 image: /images/avatar.png
 
 entries:
-  - title: The Online Portfolio
-    date: Mon, 14 Jul 2025 00:00:00 GMT
-    link: https://victorjosearavenalande.github.io/onlineportfolio-test/
-    short: Launched my personal online porfolio
-    long: During my hunt for work, I decided that I did not want to lose my momentum from my intense graduate program. One skill to enhance was GIthub, and somehow I ended up making my own webpage for my portfolio.
+
+  - title: >
+      The Online Portfolio
+    date: >
+      Mon, 14 Jul 2025 00:00:00 GMT
+    link: >
+      https://victorjosearavenalande.github.io/onlineportfolio-test/
+    short: >
+      Launched my personal online porfolio
+    long: >
+      During my hunt for work, I decided that I did not want to lose my momentum from my intense graduate program. One skill to enhance was GIthub, and somehow I ended up making my own webpage for my portfolio.
     category: engagement
-  - title: Career Essentials in GitHub Professional Certificate
-    date: Mon, 14 Jul 2025 00:00:00 GMT
+
+  - title: >
+      Career Essentials in GitHub Professional Certificate
+    date: >
+      Mon, 14 Jul 2025 00:00:00 GMT
     link: 
-    short: Certificate provided by LinkedIn and Github.
-    long: Certificate proving a fundamental competence in Github for professional use, provided by Github and LinkedIn.
+    short: >
+      Certificate provided by LinkedIn and Github.
+    long: >
+      Certificate proving a fundamental competence in Github for professional use, provided by Github and LinkedIn.
     category: engagement
-  - title: Leading Research Technician, CANlab
-    date: Sun, 01 Jun 2025 00:00:00 GMT
-    link: https://www.sv.uio.no/psi/english/research/groups/canlab/index.html
-    short: part-time work in the The Cognitive and Affective Neuroscience Lab.
-    long: Promoted to the position as a Leading Research Technician for The Cognitive and Affective Neuroscience Lab (CANlab) at the University of Oslo (UiO).
+
+  - title: >
+      Leading Research Technician, CANlab
+    date: >
+      Sun, 01 Jun 2025 00:00:00 GMT
+    link: >
+      https://www.sv.uio.no/psi/english/research/groups/canlab/index.html
+    short: >
+      part-time work in the The Cognitive and Affective Neuroscience Lab.
+    long: >
+      Promoted to the position as a Leading Research Technician for The Cognitive and Affective Neuroscience Lab (CANlab) at the University of Oslo (UiO).
     category: career
-  - title: MSc Cognitive Neuroscience (grade B)
-    date: Sun, 01 Jun 2025 00:00:00 GMT
-    link: https://www.uio.no/english/studies/programmes/psychology-master/programme-options/cogneuro/learning-outcomes/
-    short: Master program in Psychology at the University of Oslo. I recieved three grades: C (5 ETC module), B(5 ETC module) and A (60 ETC thesis). In total I graduated with 125 ETCs, where an extra 5 ETCs came from the additional PHD-module I attended outside of my own curriculum.
+
+  - title: >
+      MSc Cognitive Neuroscience (grade B)
+    date: >
+      Sun, 01 Jun 2025 00:00:00 GMT
+    link: >
+      https://www.uio.no/english/studies/programmes/psychology-master/programme-options/cogneuro/learning-outcomes/
+    short: >
+      Master program in Psychology at the University of Oslo. I recieved three grades C (5 ETC module), B(5 ETC module) and A (60 ETC thesis). In total I graduated with 125 ETCs, where an extra 5 ETCs came from the additional PHD-module I attended outside of my own curriculum.
     category: education
