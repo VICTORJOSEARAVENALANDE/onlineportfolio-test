@@ -29,7 +29,7 @@
     <a href="portfolio.html#engagement">Engagement</a>
   </header>
 
-  <h1>My Detailed Portfolio</h1>
+  <h1>Portfolio</h1>
 
   <section id="career">
     <h2>Career</h2>
@@ -86,7 +86,7 @@ fetch('portfolio.xml')
         const div = document.createElement('div');
         div.className = 'item';
         div.innerHTML = `
-          <h3><a href="${link}" target="_blank">${title}</a></h3>
+          <h3><a target="_blank">${title}</a></h3>
           <small>${date}</small>
           <p>${long}</p>
         `;

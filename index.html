@@ -11,7 +11,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: "Yu Mincho", serif; color: #fff; background: #000; }
+    body { font-family:'Poppins',sans-serif; color: #fff; background: #000; }
     header { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 20px 50px; background: rgba(0,0,0,0.7); z-index: 100; }
     header .logo { font-weight: 900; font-size: 20px; }
     header nav a { margin-left: 30px; text-decoration: none; color: #fff; font-weight: 200; }
@@ -110,13 +110,15 @@ fetch('portfolio.xml')
       const long  = item.querySelector('long').textContent;
       const link  = item.querySelector('link').textContent;
 
-      // Choose container and markup by page:
-      // On index.html → short summaries
       let container = document.getElementById(`feed-${cat}-short`);
       if (container) {
-        const p = document.createElement('p');
-        p.textContent = `• ${title} (${date}) — ${short}`;
-        container.appendChild(p);
+        const div = document.createElement('div');
+        div.className = 'item';
+        div.innerHTML = `
+          <h3>${title}</h3>
+          <small>${date}</small>
+          <p>${short}</p>`;
+        container.appendChild(div);
       }
     });
   })
