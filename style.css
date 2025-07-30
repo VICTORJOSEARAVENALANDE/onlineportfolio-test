@@ -83,8 +83,18 @@ section {
   line-height: 1.5;
   margin-bottom: 30px;
 }
-.btn-more,
-.intro-left .btn-more {
+.btn-more {
+  display: inline-block;
+  border: 1px solid #e63946;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #e63946;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.btn-portfolio {
   display: inline-block;
   border: 1px solid #e63946;
   padding: 20px 110px;
@@ -131,9 +141,6 @@ section {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-.btn-more {
-  margin-top: 15px;
-}
 .item {
   margin-bottom: 20px;
 }
@@ -168,11 +175,11 @@ section {
   z-index: 2;
 }
 
-.intro-left .btn-more {
+.intro-left .btn-portfolio {
   position: absolute;
   right: 0;                /* align to the right edge of .intro-left */
-  top: 108%;                /* tweak this so it sits at the same height as your button */
+  top: 108%;               /* tweak this so it sits at the same height as your button */
   transform: translateX(82%); /* shift it 50% of its own width into the image */
-  z-index: 1;              /* sit underneath the portrait */
+  z-index: 3;              /* ensure it sits above the portrait */
 }
 
