@@ -71,10 +71,10 @@ section {
 .intro-left .title {
   color: #e63946;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 500;
 }
 .intro-left h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 900;
   margin: 10px 0;
 }
@@ -101,12 +101,9 @@ section {
 }
 
 .intro-right img {
-  /* ensure the image scales to its container */
-  max-width: 100%;
-  height: auto;
-}
-.intro-right img {
-  max-height: 80vh;
+  max-height: 100vh;     /* allow it to grow taller */
+  width: auto;           /* keep natural width scaling */
+  max-width: 170%;        /* limit it to avoid overflow */
   border-radius: 10px;
   transform: scaleX(-1);
 }
