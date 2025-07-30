@@ -10,9 +10,9 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  background: url('ChatGPT Image Jul 30, 2025, 03_08_24 PM.png')
-    no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('ChatGPT Image Jul 30, 2025, 03_08_24 PM.png') no-repeat center center;    
   background-size: cover;
+  background-attachment: scroll;
   padding-top: 80px;
 }
 
@@ -51,17 +51,22 @@ section {
   margin: 0 auto;
 }
 
-/* Intro (index.html) */
 .intro {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
   padding-top: 80px;
+  flex-wrap: nowrap;
 }
+
 .intro-left {
-  max-width: 60%;
+  /* override the 60% max-width so it won’t shrink too small */
+  flex: 0 0 50%;
+  max-width: none;
+  min-width: 300px;    /* prevent it from collapsing if viewport < 600px */
 }
+
 .intro-left .small,
 .intro-left .title {
   color: #e63946;
@@ -88,6 +93,18 @@ section {
   color: #e63946;
   font-size: 14px;
 }
+.intro-right {
+  /* take up the other half and center the image within */
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-right img {
+  /* ensure the image scales to its container */
+  max-width: 100%;
+  height: auto;
+}
 .intro-right img {
   max-height: 80vh;
   border-radius: 10px;
@@ -100,7 +117,7 @@ section {
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
-  color: #ccc;
+  color: #ffffff;
   margin-top: -40px;
 }
 
@@ -127,7 +144,6 @@ section {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #e63946;
 }
 .item small {
   display: block;
@@ -138,7 +154,7 @@ section {
 /* Portfolio page (portfolio.html) */
 .page-title {
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 900px;
   color: #e63946;
   text-align: center;
   margin: 40px 0;
