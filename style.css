@@ -10,7 +10,9 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  background: #000;
+  background: url('ChatGPT Image Jul 30, 2025, 03_08_24 PM.png')
+    no-repeat center center fixed;
+  background-size: cover;
   padding-top: 80px;
 }
 
@@ -44,7 +46,9 @@ header nav a:hover {
 
 /* Sections */
 section {
-  padding: 100px 50px;
+  padding: 80px 50px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Intro (index.html) */
@@ -137,9 +141,4 @@ section {
   color: #e63946;
   text-align: center;
   margin: 40px 0;
-}
-section {
-  padding: 80px 50px;
-  max-width: 900px;
-  margin: 0 auto;
 }
