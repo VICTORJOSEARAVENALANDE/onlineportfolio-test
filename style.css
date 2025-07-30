@@ -87,11 +87,11 @@ section {
 .intro-left .btn-more {
   display: inline-block;
   border: 1px solid #e63946;
-  padding: 12px 30px;
+  padding: 20px 110px;
   text-decoration: none;
   font-weight: 800;
   color: #e63946;
-  font-size: 14px;
+  font-size: 30px;
 }
 .intro-right {
   /* take up the other half and center the image within */
@@ -156,3 +156,23 @@ section {
   text-align: center;
   margin: 40px 0;
 }
+
+/* make left container the positioning context */
+.intro-left {
+  position: relative;
+}
+
+/* ensure the portrait sits above the button */
+.intro-right {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-left .btn-more {
+  position: absolute;
+  right: 0;                /* align to the right edge of .intro-left */
+  top: 108%;                /* tweak this so it sits at the same height as your button */
+  transform: translateX(82%); /* shift it 50% of its own width into the image */
+  z-index: 1;              /* sit underneath the portrait */
+}
+
