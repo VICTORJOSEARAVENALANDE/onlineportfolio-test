@@ -91,6 +91,7 @@ section {
 .intro-right img {
   max-height: 80vh;
   border-radius: 10px;
+  transform: scaleX(-1);
 }
 
 /* Quote */
