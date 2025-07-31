@@ -16,6 +16,7 @@ entries:
       Sun, 01 Jun 2025 00:00:00 GMT
     link: >
       https://www.sv.uio.no/psi/english/research/groups/canlab/index.html
+    image: /images/placeholder.png
     short: >
       part-time work in the The Cognitive and Affective Neuroscience Lab.
     long: >
@@ -29,6 +30,7 @@ entries:
       2023-2025
     link: >
       https://www.uio.no/english/studies/programmes/psychology-master/programme-options/cogneuro/learning-outcomes/
+    image: /images/placeholder.png
     short: >
       Research degree with focus on programming, analysing and visualising brain metrics through tools like EEG and (f)MRI. Additional PHD-module in machine learning and a master thesis titled: New Insights into Adolescent 15q11.2 CNVs: A Dual Approach Using Normative Modelling and Raw Metrics.
     long: >
@@ -41,6 +43,7 @@ entries:
       2020-2023
     link: >
       https://www.roehampton.ac.uk/study/undergraduate-courses/psychology/
+    image: /images/placeholder.png
     short: >
       Dissertation titled: Mental Time Travel and False Memory
     long: >
@@ -67,7 +70,8 @@ entries:
       Career Essentials in GitHub Professional Certificate
     date: >
       Mon, 14 Jul 2025 00:00:00 GMT
-    link: 
+    link:
+    image: /images/placeholder.png
     short: >
       Certificate provided by LinkedIn and Github.
     long: >
@@ -80,10 +84,9 @@ entries:
       Mon, 14 Jul 2025 00:00:00 GMT
     link: >
       https://victorjosearavenalande.github.io/onlineportfolio-test/
+    image: /images/placeholder.png
     short: >
       Launched my personal online porfolio
     long: >
       During my hunt for work, I decided that I did not want to lose my momentum from my intense graduate program. One skill to enhance was GIthub, and somehow I ended up making my own webpage for my portfolio.
     category: engagement
-
-

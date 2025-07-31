@@ -114,9 +114,11 @@ def main() -> None:
         ET.SubElement(item, 'long').text = e['long']
         ET.SubElement(item, 'date').text = e['date']
         ET.SubElement(item, 'category').text = e.get('category', '')
+        if 'image' in e:
+            ET.SubElement(item, 'image').text = data['link'] + e['image']
 
     ET.ElementTree(rss).write(
-        'portfolio.xml', encoding='utf-8', xml_declaration=True
+        'portfolio.xml', encoding='utf-8', xml_declaration=True 
     )
 
 

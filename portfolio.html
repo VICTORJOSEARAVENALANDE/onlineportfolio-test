@@ -78,13 +78,15 @@ fetch('portfolio.xml')
       const short = item.querySelector('short').textContent;
       const long  = item.querySelector('long').textContent;
       const link  = item.querySelector('link').textContent;
+      const image = item.querySelector('image')?.textContent || 'images/placeholder.png';
 
       container = document.getElementById(`feed-${cat}-long`);
       if (container) {
         const div = document.createElement('div');
         div.className = 'item';
         div.innerHTML = `
-          <h3><a target="_blank">${title}</a></h3>
+          <img src="${image}" alt="${title}" class="item-image">
+          <h3><a target="_blank" href="${link}">${title}</a></h3>
           <small>${date}</small>
           <p>${long}</p>
         `;

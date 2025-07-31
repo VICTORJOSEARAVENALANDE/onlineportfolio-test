@@ -10,8 +10,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('ChatGPT Image Jul 30, 2025, 03_08_24 PM.png') no-repeat center center;    
-  background-size: cover;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/ChatGPT Image Jul 30, 2025, 03_08_24 PM.png') no-repeat center center;
   background-attachment: scroll;
   padding-top: 80px;
 }
