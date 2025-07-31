@@ -2,13 +2,77 @@
 link: >
   https://VICTORJOSEARAVENALANDE.github.io/onlineportfolio-test
 title: >
-  Victor-José’s Online Portfolio 
+  "Victor-José's Online Portfolio"
 description: >
   All new certificates, jobs, projects and milestones.
 language: "en-US"
 image: "/images/avatar.png"
 
 entries:
+# Career
+  - title: >
+      Leading Research Technician, CANlab
+    date: >
+      Sun, 01 Jun 2025 00:00:00 GMT
+    link: >
+      https://www.sv.uio.no/psi/english/research/groups/canlab/index.html
+    short: >
+      part-time work in the The Cognitive and Affective Neuroscience Lab.
+    long: >
+      Promoted to the position as a Leading Research Technician for The Cognitive and Affective Neuroscience Lab (CANlab) at the University of Oslo (UiO).
+    category: career
+
+# Education
+  - title: >
+      MSc Cognitive Neuroscience (grade A)
+    date: >
+      2023-2025
+    link: >
+      https://www.uio.no/english/studies/programmes/psychology-master/programme-options/cogneuro/learning-outcomes/
+    short: >
+      Research degree with focus on programming, analysing and visualising brain metrics through tools like EEG and (f)MRI. Additional PHD-module in machine learning and a master thesis titled: New Insights into Adolescent 15q11.2 CNVs: A Dual Approach Using Normative Modelling and Raw Metrics.
+    long: >
+      Master program in Psychology at the University of Oslo. I recieved three grades C (5 ETC module), B(5 ETC module) and A (60 ETC thesis). In total I graduated with 125 ETCs, where an extra 5 ETCs came from the additional PHD-module I attended outside of my own curriculum.
+    category: education
+
+  - title: >
+      Psychology BSc (First-Class Honors Degree 1:1)
+    date: >
+      2020-2023
+    link: >
+      https://www.roehampton.ac.uk/study/undergraduate-courses/psychology/
+    short: >
+      Dissertation titled: Mental Time Travel and False Memory
+    long: >
+      This suite of Psychology programmes has a strong history of accreditation and has consistently been commended for the high-quality education and outstanding student experience by the British Psychological Society (BPS).
+      List of Modules:
+      - Introduction to Research Methods in Psychology
+      - Psychological Problem Solving
+      - Mind, Body & Brain (1 & 2)
+      - Research Methods and Statistics (1 & 2)
+      - Social and Developmental Psychology (1 & 2)
+      - Psychology in the Real World
+      - Understanding Mental Health
+      - Perspectives on Consciousness (Single Honours Psychology only)
+      - Individual Differences and Psychometric Research
+      - Neuropsychology
+      - Cognition and Emotion
+      - Health Psychology
+      - Topics in Adult Psychopathology
+      - Extended Research Project
+    category: education
+
+# Engagement
+  - title: >
+      Career Essentials in GitHub Professional Certificate
+    date: >
+      Mon, 14 Jul 2025 00:00:00 GMT
+    link: 
+    short: >
+      Certificate provided by LinkedIn and Github.
+    long: >
+      Certificate proving a fundamental competence in Github for professional use, provided by Github and LinkedIn.
+    category: engagement
 
   - title: >
       The Online Portfolio
@@ -22,37 +86,4 @@ entries:
       During my hunt for work, I decided that I did not want to lose my momentum from my intense graduate program. One skill to enhance was GIthub, and somehow I ended up making my own webpage for my portfolio.
     category: engagement
 
-  - title: >
-      Career Essentials in GitHub Professional Certificate
-    date: >
-      Mon, 14 Jul 2025 00:00:00 GMT
-    link: 
-    short: >
-      Certificate provided by LinkedIn and Github.
-    long: >
-      Certificate proving a fundamental competence in Github for professional use, provided by Github and LinkedIn.
-    category: engagement
 
-  - title: >
-      Leading Research Technician, CANlab
-    date: >
-      Sun, 01 Jun 2025 00:00:00 GMT
-    link: >
-      https://www.sv.uio.no/psi/english/research/groups/canlab/index.html
-    short: >
-      part-time work in the The Cognitive and Affective Neuroscience Lab.
-    long: >
-      Promoted to the position as a Leading Research Technician for The Cognitive and Affective Neuroscience Lab (CANlab) at the University of Oslo (UiO).
-    category: career
-
-  - title: >
-      MSc Cognitive Neuroscience (grade B)
-    date: >
-      Sun, 01 Jun 2025 00:00:00 GMT
-    link: >
-      https://www.uio.no/english/studies/programmes/psychology-master/programme-options/cogneuro/learning-outcomes/
-    short: >
-      Research, data analysis, data visualisation, (f)MRI, EEG, machine learning, Python, MATLAB, R. 
-    long: >
-      Master program in Psychology at the University of Oslo. I recieved three grades C (5 ETC module), B(5 ETC module) and A (60 ETC thesis). In total I graduated with 125 ETCs, where an extra 5 ETCs came from the additional PHD-module I attended outside of my own curriculum.
-    category: education
