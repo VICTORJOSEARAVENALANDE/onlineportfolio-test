@@ -173,6 +173,7 @@ section {
 .intro-right {
   position: relative;
   z-index: 3;
+  pointer-events: none; /* allow clicking the button underneath */
 }
 
 .intro-left .btn-portfolio {
@@ -180,6 +181,6 @@ section {
   right: 0;                /* align to the right edge of .intro-left */
   top: 116%;               /* tweak this so it sits at the same height as your button */
   transform: translateX(82%); /* shift it 50% of its own width into the image */
-  z-index: 1;              /* ensure it sits below the portrait */
+  z-index: 1;              /* keep below portrait */
 }
 
