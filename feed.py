@@ -118,7 +118,7 @@ def main() -> None:
             ET.SubElement(item, 'image').text = data['link'] + e['image']
 
     ET.ElementTree(rss).write(
-        'portfolio.xml', encoding='utf-8', xml_declaration=True
+        'portfolio.xml', encoding='utf-8', xml_declaration=True 
     )
 
 

@@ -78,6 +78,7 @@ fetch('portfolio.xml')
       const short = item.querySelector('short').textContent;
       const long  = item.querySelector('long').textContent;
       const link  = item.querySelector('link').textContent;
+
       const imgNode = item.querySelector('image');
       const image = imgNode ? imgNode.textContent : '';
 
