@@ -78,18 +78,24 @@ fetch('portfolio.xml')
       const short = item.querySelector('short').textContent;
       const long  = item.querySelector('long').textContent;
       const link  = item.querySelector('link').textContent;
-      const image = item.querySelector('image')?.textContent || 'images/placeholder.png';
+
+      const imgNode = item.querySelector('image');
+      const image = imgNode ? imgNode.textContent : '';
 
       container = document.getElementById(`feed-${cat}-long`);
       if (container) {
         const div = document.createElement('div');
         div.className = 'item';
-        div.innerHTML = `
-          <img src="${image}" alt="${title}" class="item-image">
+        let html = '';
+        if (image) {
+          html += `<img src="${image}" alt="${title}" class="item-image">`;
+        }
+        html += `
           <h3><a target="_blank" href="${link}">${title}</a></h3>
           <small>${date}</small>
           <p>${long}</p>
         `;
+        div.innerHTML = html;
         container.appendChild(div);
       }
     });
