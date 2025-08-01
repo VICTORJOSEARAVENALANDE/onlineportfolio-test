@@ -11,7 +11,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/ChatGPT Image Jul 30, 2025, 03_08_24 PM.png') no-repeat center center;
-  background-size: cover;
+  Background: cover;
   background-attachment: scroll;
   padding-top: 80px;
 }
@@ -154,6 +154,7 @@ section {
   margin-bottom: 10px;
   color: #bbb;
 }
+
 .item-image {
   max-width: 100%;
   height: auto;
@@ -187,5 +188,12 @@ section {
   top: 116%;               /* tweak this so it sits at the same height as your button */
   transform: translateX(82%); /* shift it 50% of its own width into the image */
   z-index: 1;              /* keep below portrait */
+}
+
+.quote-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #e63946;
 }
 
