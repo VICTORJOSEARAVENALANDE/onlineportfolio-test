@@ -71,18 +71,17 @@ fetch('portfolio.xml')
   .then(res => res.text())
   .then(str => new DOMParser().parseFromString(str,'text/xml'))
   .then(xml => {
+    const getText = (n, s) => (n.querySelector(s)?.textContent || '').trim();
     xml.querySelectorAll('item').forEach(item => {
-      const cat   = item.querySelector('category').textContent;
-      const title = item.querySelector('title').textContent;
-      const date  = item.querySelector('date').textContent;
-      const short = item.querySelector('short').textContent;
-      const long  = item.querySelector('long').textContent;
-      const link  = item.querySelector('link').textContent;
+      const cat   = getText(item, 'category');
+      const title = getText(item, 'title');
+      const date  = getText(item, 'date');
+      const short = getText(item, 'short');
+      const long  = getText(item, 'long');
+      const link  = getText(item, 'link');
+      const image = getText(item, 'image');
 
-      const imgNode = item.querySelector('image');
-      const image = imgNode ? imgNode.textContent : '';
-
-      container = document.getElementById(`feed-${cat}-long`);
+      const container = document.getElementById(`feed-${cat}-long`);
       if (container) {
         const div = document.createElement('div');
         div.className = 'item';
