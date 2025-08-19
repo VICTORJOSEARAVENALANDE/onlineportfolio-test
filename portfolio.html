@@ -85,12 +85,11 @@ fetch('portfolio.xml')
       if (container) {
         const div = document.createElement('div');
         div.className = 'item';
-        let html = '';
+        let html = `<h3>${title}</h3>`;
         if (image) {
           html += `<img src="${image}" alt="${title}" class="item-image">`;
         }
         html += `
-          <h3>${title}</h3>
           <small>${date}</small>
           <p>${long}</p>
         `;
